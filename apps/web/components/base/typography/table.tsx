@@ -1,6 +1,6 @@
 interface TableColumn {
   header: string;
-  align?: "left" | "center" | "right";
+  align?: 'left' | 'center' | 'right';
 }
 
 interface TableRow {
@@ -16,12 +16,12 @@ interface TableTypographyProps {
 export function TableTypography({
   columns,
   data,
-  className = "",
+  className = '',
 }: TableTypographyProps) {
-  const getAlignClass = (align?: "left" | "center" | "right") => {
-    if (align === "center") return "text-center";
-    if (align === "right") return "text-right";
-    return "text-left";
+  const getAlignClass = (align?: 'left' | 'center' | 'right') => {
+    if (align === 'center') return 'text-center';
+    if (align === 'right') return 'text-right';
+    return 'text-left';
   };
 
   return (
@@ -47,7 +47,7 @@ export function TableTypography({
                   key={colIndex}
                   className={`border px-4 py-2 ${getAlignClass(column.align)} [&[align=center]]:text-center [&[align=right]]:text-right`}
                 >
-                  {row[column.header] || ""}
+                  {row[column.header] || ''}
                 </td>
               ))}
             </tr>
