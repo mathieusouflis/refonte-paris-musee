@@ -1,6 +1,14 @@
-export function List({ elements }: { elements: React.ReactNode[] }) {
+import { cn } from "@/lib/utils";
+
+export function List({
+  elements,
+  className,
+}: {
+  elements: React.ReactNode[];
+  className?: string;
+}) {
   return (
-    <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
+    <ul className={cn("my-6 ml-6 list-disc [&>li]:mt-2", className)}>
       {elements.map((element, idx) => (
         <li key={idx}>{element}</li>
       ))}

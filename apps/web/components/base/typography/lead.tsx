@@ -1,3 +1,13 @@
-export function Lead({ children }: { children: React.ReactNode }) {
-  return <p className="text-muted-foreground text-xl">{children}</p>;
+import { cn } from "@/lib/utils";
+
+export function Lead({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <p className={cn("text-muted-foreground text-xl", className)}>{children}</p>
+  );
 }
