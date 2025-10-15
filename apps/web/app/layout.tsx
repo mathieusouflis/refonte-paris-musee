@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { geistSans, getFontsVariables } from "@/lib/fonts";
+import { switzer, getFontsVariables } from "@/lib/fonts";
 import { Main } from "@/components/layout/Main";
 
 export const metadata: Metadata = {
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={getFontsVariables()}>
-      <body className={geistSans.className}>
+      <body className={switzer.className}>
         <Main>{children}</Main>
       </body>
     </html>
