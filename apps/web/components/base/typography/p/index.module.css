@@ -1,0 +1,23 @@
+@import url("../../../../app/globals.css");
+
+.p {
+  font-family: var(--switzer);
+  font-size: var(--font-p);
+  font-weight: 400;
+}
+
+/* Mobile */
+@media screen and (max-width: 393px) {
+}
+
+/* Tablet */
+@media screen and (min-width: 394px) and (max-width: 767px) {
+}
+
+/* Desktop */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+}
+
+/* XL Desktop */
+@media screen and (min-width: 1280px) {
+}
