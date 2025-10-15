@@ -1,22 +1,44 @@
 import localFont from "next/font/local";
 
-export const geistSans = localFont({
-  src: "../app/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+export const switzer = localFont({
+  src: [
+    {
+      path: "../app/fonts/SwitzerVF.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "../app/fonts/SwitzerVF-Italic.woff2",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--switzer",
   display: "swap",
 });
 
-export const geistMono = localFont({
-  src: "../app/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+export const gambeta = localFont({
+  src: [
+    {
+      path: "../app/fonts/GambettaVF.woff2",
+      weight: "100 900",
+      style: "normal",
+    },
+    {
+      path: "../app/fonts/GambettaVF-Italic.woff2",
+      weight: "100 900",
+      style: "italic",
+    },
+  ],
+  variable: "--gambeta",
   display: "swap",
 });
 
-export type FontName = "sans" | "mono";
+export type FontName = "sans" | "serif";
 
 export const fontsMap = {
-  sans: geistSans,
-  mono: geistMono,
+  sans: switzer,
+  serif: gambeta,
 } as const;
 
 export function getFontsVariables(): string {
